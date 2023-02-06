@@ -5,11 +5,9 @@ import './styles/App.css'
 function App() {
   return (
     <div className="App">
-      <PostItem value={22222}/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
-      <PostItem/>
+      <PostItem post={{id: 1, title: 'Javascript', body:'Description'}}/>
+      <PostItem post={{id: 2, title: 'Typescript', body:'Description'}}/>
+
     </div>
   );
 }
