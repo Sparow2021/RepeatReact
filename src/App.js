@@ -12,7 +12,7 @@ function App() {
     likes+=1;
     console.log(likes)
   }
-
+  //developer
   return (
     <div className="App">
       <h1>{likes}</h1>
