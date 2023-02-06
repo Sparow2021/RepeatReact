@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+индексы при map не использовать ибо при добавлении и удалении элементов
+индексы меняются, а ключ всегда должен быть статичным и уникальным.
+Ключи (key) позволяют алгоритмам реакта перерисовывать не весь список, а только те где, произошли нейкие изменения.

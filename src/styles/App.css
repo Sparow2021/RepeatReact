@@ -63,3 +63,9 @@ img {
 .post__btn{
     align-self: center;
 }
+.posts_list_name{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
