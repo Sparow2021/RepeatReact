@@ -5,7 +5,7 @@ import './styles/App.css'
 function App() {
   return (
     <div className="App">
-      <PostItem/>
+      <PostItem value={22222}/>
       <PostItem/>
       <PostItem/>
       <PostItem/>
