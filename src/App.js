@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
-  let likes = 0
+  const state = useState(0)
+  console.log(state)
 
   function increment() {
-    likes+=1;
-    console.log(likes)
+   
   }
   
   function decrement() {
-    likes+=1;
-    console.log(likes)
+  
   }
   //developer
   return (
