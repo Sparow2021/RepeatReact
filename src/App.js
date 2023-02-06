@@ -1,18 +1,15 @@
 import React from "react";
+import PostItem from "./components/PostItem";
 import './styles/App.css'
 
 function App() {
   return (
     <div className="App">
-      <div className="post">
-        <div className="post__content">
-          <strong>1. Javascript</strong>
-          <div>Javascript - язык программирования</div>
-        </div>
-        <div className="post__btn">
-          <button>Удалить</button>
-        </div>
-      </div>
+      <PostItem/>
+      <PostItem/>
+      <PostItem/>
+      <PostItem/>
+      <PostItem/>
     </div>
   );
 }
