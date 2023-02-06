@@ -4,10 +4,15 @@ import Counter from "./components/Counter";
 function App() {
   return (
     <div className="App">
-      <Counter/>
-      <Counter/>
-      <Counter/>
-
+      <div className="post">
+        <div className="post__content">
+          <strong>1. Javascript</strong>
+          <div>Javascript - язык программирования</div>
+        </div>
+        <div className="post__btn">
+          <button>Удалить</button>
+        </div>
+      </div>
     </div>
   );
 }
