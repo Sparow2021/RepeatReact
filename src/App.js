@@ -28,8 +28,8 @@ function App() {
     <div className="App">
       <form>
         <MyInput type="text" placeholder="Название" value={title} onChange={e => setTitle(e.target.value)}/>
-        <input ref={bodyInputRef} type="text" placeholder="test"/>
-        {/* <MyInput type="text" placeholder="Описание"/> */}
+        {/* <input ref={bodyInputRef} type="text" placeholder="test"/> */}
+        <MyInput ref={bodyInputRef} type="text" placeholder="Описание"/>
         <MyButton  onClick={addNewPost}>Создать пост</MyButton>
       </form>
       <PostList posts={posts} title={'Список курсов: '}/>
