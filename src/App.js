@@ -14,25 +14,27 @@ function App() {
     { id: 4, title: 'React', body: 'Description' }
   ])
 
-  const [title, setTitle] = useState('sadasd');
-  const bodyInputRef = useRef();
+  const [title, setTitle] = useState('title');
+  const [body, setBody] = useState('body');
 
-  function addNewPost(event){
+
+
+  function addNewPost(event) {
     event.preventDefault();
-    console.log({title})
-    console.log(bodyInputRef.current.value)
+    console.log({ title })
+    console.log({ body })
+
     console.log('Новый пост добавлен!')
   }
 
   return (
     <div className="App">
       <form>
-        <MyInput type="text" placeholder="Название" value={title} onChange={e => setTitle(e.target.value)}/>
-        {/* <input ref={bodyInputRef} type="text" placeholder="test"/> */}
-        <MyInput ref={bodyInputRef} type="text" placeholder="Описание"/>
-        <MyButton  onClick={addNewPost}>Создать пост</MyButton>
+        <MyInput type="text" placeholder="Название" value={title} onChange={e => setTitle(e.target.value)} />
+        <MyInput type="text" placeholder="Описание" value={body} onChange={e=>setBody(e.target.value)} />
+        <MyButton onClick={addNewPost}>Создать пост</MyButton>
       </form>
-      <PostList posts={posts} title={'Список курсов: '}/>
+      <PostList posts={posts} title={'Список курсов: '} />
     </div>
   );
 }
