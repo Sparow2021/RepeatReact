@@ -14,29 +14,34 @@ function App() {
     { id: 4, title: 'React', body: 'Description' }
   ])
 
-  const [title, setTitle] = useState('title');
-  const [body, setBody] = useState('body');
-
+  //Делает общее состояние, которое будет не строкой, а обьектом со свойствами-значениями
+  const [post, setPost] = useState({
+    title:'',
+    body: '',
+    id: Date.now(),
+  })
 
 
   function addNewPost(event) {
     event.preventDefault();
-    const newPost = {
-      id: Date.now(),
-      title,
-      body
-    }
-    setPosts([...posts, newPost]);
-    setTitle('');
-    setBody('');
+    setPosts([...posts, post]);
+    setPost({title:'', body: '', id: ''})
   }
 
   return (
     <div className="App">
       <form>
-        <MyInput type="text" placeholder="Название" value={title} onChange={e => setTitle(e.target.value)} />
-        <MyInput type="text" placeholder="Описание" value={body} onChange={e => setBody(e.target.value)} />
-        <MyButton onClick={addNewPost}>Создать пост</MyButton>
+        <MyInput
+          type="text"
+          placeholder="Название"
+          value={post.title}
+          onChange={e => setPost({...post , title:e.target.value})} />
+        <MyInput
+          type="text"
+          placeholder="Описание"
+          value={post.body}
+          onChange={e => setPost({...post, body: e.target.value})} />
+        <MyButton disabled onClick={addNewPost}>Создать пост</MyButton>
       </form>
       <PostList posts={posts} title={'Список курсов: '} />
     </div>
