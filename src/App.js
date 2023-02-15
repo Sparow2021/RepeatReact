@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
+import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
 import MyButton from "./components/UI/button/MyButton";
 import MyInput from "./components/UI/input/MyInput";
@@ -29,7 +30,8 @@ function App() {
 
   return (
     <div className="App">
-      <form>
+      <PostForm/>
+      {/* <form>
 
         <MyInput
           type="text"
@@ -43,7 +45,7 @@ function App() {
           onChange={e => setPost({ ...post, body: e.target.value })} />
         <MyButton  onClick={addNewPost}>Создать пост</MyButton>
       
-      </form>
+      </form> */}
       <PostList posts={posts} title={'Список курсов: '} />
     </div>
   );
