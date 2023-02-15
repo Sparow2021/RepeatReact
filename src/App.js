@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
 // import MyButton from "./components/UI/button/MyButton";
@@ -7,7 +7,7 @@ import './styles/App.css'
 
 
 function App() {
-
+  //создаём селект
   const [posts, setPosts] = useState([
     { id: 1, title: 'Javascript', body: 'Description' },
     { id: 2, title: 'Typescript', body: 'Description' },
@@ -21,10 +21,10 @@ function App() {
   const removePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id))
   }
-  
+
   return (
     <div className="App">
-      <PostForm create={createPost}/>
+      <PostForm create={createPost} />
       {posts.length ? (
         <PostList remove={removePost} posts={posts} title={'Список курсов: '} />
       ) : (
