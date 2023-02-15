@@ -69,3 +69,10 @@ img {
     justify-content: center;
     margin: 20px;
 }
+
+.list_h{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+}
