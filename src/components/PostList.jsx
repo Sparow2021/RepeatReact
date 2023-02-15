@@ -1,6 +1,6 @@
 import React from 'react';
 import PostItem from './PostItem';
-const PostList = ({posts, title, remove}) => {
+const PostList = ({ posts, title, remove }) => {
 
     return (
         <div>

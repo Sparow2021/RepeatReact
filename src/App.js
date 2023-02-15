@@ -30,8 +30,8 @@ function App() {
       <MySelect
         defaultValue={'Сортировка по:'}
         options={[
-          { name: 'По названию', value: 'name' },
-          { name: 'По описанию', value: 'descr' }
+          { name: 'По названию', value: 'title' },
+          { name: 'По описанию', value: 'body' }
         ]} />
       {posts.length ? (
         <PostList remove={removePost} posts={posts} title={'Список курсов: '} />

@@ -43,34 +43,37 @@ img {
 
 /* конец обнуления */
 
-#root{
-    display:flex;
+#root {
+    display: flex;
     justify-content: center;
 }
-.App{
+
+.App {
     width: 800px;
 }
 
 .post {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     padding: 15px;
     margin-top: 15px;
     border: 2px solid black;
-    width:100%;
+    width: 100%;
 
 }
-.post__btn{
+
+.post__btn {
     align-self: center;
 }
-.posts_list_name{
-    width:100%;
+
+.posts_list_name {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
-.list_h{
+.list_h {
     display: flex;
     width: 100%;
     justify-content: center;

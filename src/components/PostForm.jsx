@@ -16,7 +16,7 @@ const PostForm = ({ create }) => {
         create(newPost)
     }
 
-
+    
     return (
         <form>
             <MyInput
