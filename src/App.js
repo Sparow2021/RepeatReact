@@ -16,32 +16,33 @@ function App() {
 
   //Делает общее состояние, которое будет не строкой, а обьектом со свойствами-значениями
   const [post, setPost] = useState({
-    title:'',
-    body: '',
-    id: Date.now(),
+    title: '',
+    body: ''
   })
 
 
   function addNewPost(event) {
     event.preventDefault();
-    setPosts([...posts, post]);
-    setPost({title:'', body: '', id: ''})
+    setPosts([...posts, {...post, id: Date.now()}]);
+    setPost({ title: '', body: ''})
   }
 
   return (
     <div className="App">
       <form>
+
         <MyInput
           type="text"
           placeholder="Название"
           value={post.title}
-          onChange={e => setPost({...post , title:e.target.value})} />
+          onChange={e => setPost({ ...post, title: e.target.value })} />
         <MyInput
           type="text"
           placeholder="Описание"
           value={post.body}
-          onChange={e => setPost({...post, body: e.target.value})} />
-        <MyButton disabled onClick={addNewPost}>Создать пост</MyButton>
+          onChange={e => setPost({ ...post, body: e.target.value })} />
+        <MyButton  onClick={addNewPost}>Создать пост</MyButton>
+      
       </form>
       <PostList posts={posts} title={'Список курсов: '} />
     </div>
